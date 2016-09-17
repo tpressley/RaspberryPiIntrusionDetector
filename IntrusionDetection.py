@@ -7,11 +7,10 @@ GPIO.setup(19,GPIO.OUT)
 GPIO.output(19,GPIO.LOW)
 
 def checkForFailedPasswordLogin():
-        i = 0
         last = ""
         prev = last
         found = 0
-        while(i < 10):
+        while(True):
                 f = open("/var/log/auth.log")
                 for line in f:
                         last = line
